@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@100;700&display=swap');
+
+
+body{
+    font-size: 18px;
+    overflow-x: hidden;
+
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* CONFIGURAÇÕES DA HEADER, MENU E BACKGROUND IMAGE PARA DESKTOP*/
+
+header{
+    background-image: url("./images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    color:white;
+    background-position: center;
+}
+
+.header-line{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header-menu-logo h3{
+    font-size: 2rem;
+    padding: 7px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.header-menu-items{
+    display: flex;
+    gap:50px;
+    padding: 15px;
+    margin-right: 40px;
+    font-size: 1rem;
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.header-menu-items li{
+    opacity: 80%;
+}
+.header-menu-items li:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.header-menu-items button{
+    font-size: 1rem;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Barlow', sans-serif;
+    background-color: white;
+    margin-top: -3%; 
+}
+
+.header-menu-items button:hover{
+    background-color: rgba(255,255,255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+}
+
+.header-title{
+    text-align: center;
+    margin-top: 80px;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 5px;
+    font-size: 1.9rem;
+}
+
+.header-arrow-down img{
+    width: 30px;
+    
+}
+.header-arrow-down{
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* CONFIGURAÇÕES PARA A HEADER, MENU E BG RESPONSIVO  */
+
+
+@media (min-width:375px)and (max-width:750px){
+    header{
+        background-image: url('./images/mobile/image-header.jpg');
+    }
+    .header-menu{
+        display: none;
+    }
+}
+
+/* CONFIGURAÇÕES DO CONTEÚDO PRINCIPAL DO SITE */
+
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.description{
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+}
+
+.products-images-mobile{
+    display: none;
+    
+}
+
+.products{
+    background-color: whitesmoke
+}
+.products-images{
+    width: 100%;
+    height: 100%;
+}
+
+.products-description-bg1{
+    background-image:url('./images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.products-description-bg2{
+    background-image: url('./images/desktop/image-photography.jpg');
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+}
+
+.box-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-description{
+    font-family: 'Fraunces', serif;
+    max-width: 300px;
+    font-size: 1.1rem;
+}
+
+.text-description h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.text-description p{
+    margin-bottom: 30px;
+}
+
+#link-yellow{
+    color:black;
+    font-weight: bold;
+    position: relative;
+}
+
+#link-yellow:after{
+    content:"";
+    background-color: hsl(51, 100%, 49%);
+    height: 6px;
+    width: 0%;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    border-radius: 10px;
+
+}
+
+#link-yellow:hover:after{
+    width: 100%;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+    
+}
+
+#link-red{
+    color:black;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+#link-red:after{
+    content:"";
+    background-color:  hsl(7, 99%, 70%);
+    height: 6px;
+    width: 0%;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    border-radius: 10px;
+    
+}
+
+#link-red:hover:after{
+    width: 100%;
+    transition: ease-in-out;
+    transition-duration: 250ms;
+}
+
+.text-description-bg{
+    font-family: 'Fraunces', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    width: 400px;
+    padding: 30px;
+    margin-top: 260px;
+}
+
+.text-description-bg h4{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: hsl(167, 40%, 24%);
+}
+
+/* CONFIGURAÇÕES DO CONTEÚDO PRINCIPAL RESPONSIVO*/
+
+@media (min-width:375px)and (max-width:750px){
+    .products{
+        display: flex;
+        flex-direction: column;
+    }
+    .products-images{
+        display: none;
+    }
+    .products-images-mobile{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    #image-one{
+        order:-1;
+    }
+
+    #image-two{
+        order:0;
+    }
+
+    .mobile-one{
+        order:0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* CONFIGURAÇÕES DA SESSÃO DE DEPOIMENTOS */
+
+.testimonials{
+    background-color: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-container{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.testimonials h3{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    color: hsl(210, 4%, 67%);
+    letter-spacing: 5px;
+    font-size: 1.3rem;
+}
+
+.testimonial img{
+    border-radius: 100px;
+    width: 70px;
+}
+
+.testimonial{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 65vh;
+    margin: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.testimonial p, .ocupation p {
+    line-height: 1.5rem;
+    color:hsl(213, 9%, 39%);
+}
+
+.ocupation h4{
+    line-height: 1.5rem;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+}
+
+.ocupation p{
+    color: hsl(232, 10%, 55%);
+    line-height: 2rem;
+    font-size: 0.7rem;
+}
+
+/* CONFIGURAÇÕES DO FOOTER */
+
+.images-container {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+}
+
+.images-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.medias-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  hsl(168, 29%, 59%);
+    color: hsl(167, 40%, 24%);
+    padding: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.medias-container h3{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    margin-top: 30px;
+}
+
+.medias-container menu{
+    display: flex;
+}
+
+.medias-container menu li{
+    margin: 20px;
+    font-weight: 300;
+    opacity: 70%;
+    margin-bottom: 90px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.medias-container menu li:hover{
+    color:white;
+}
+
+.social-medias{
+    margin-bottom: 15px;
+}
+
+.social-medias img{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.social-medias img:hover{
+    filter: brightness(2000%);
+    transition: ease-in-out;
+    transition-duration: 300ms;
+}
